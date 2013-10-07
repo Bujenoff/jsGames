@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Multichoice Game</title>
+        <meta name="description" content="">
+        <style>
+            body {
+                margin:0px;
+            }
+            #wrapper {
+                width:620px;
+                height:620px;
+                background:#eee;
+            }
+            /*--------------------------------------*/
+            /*-----------------INTRO---------------*/
+            #intro {
+                width:100%;
+                height:100%;
+                background:#345;
+            }
+            #introbutton {
+                width:100px;
+                height:40px;
+                padding:0px;
+                border:0px;
+                border-radius:5px;
+                -moz-border-radius:5px;
+                background-color:green;
+                float:left;
+                margin-left:250px;
+                margin-top:550px;
+            }
+            /*--------------------------------------*/
+            /*-----------------SLIDES---------------*/
+            .slides {
+                width:100%;
+                height:100%;
+                display:none;
+            }
+            #slide1 {
+                background:#11ffff;  
+            }
+            #slide1_dead {
+                background:#ffffff;
+            }
+            #slide2 {
+                background:#ff11ff;   
+            }
+            #slide2_dead {
+                background:#ffffff;  
+            }
+            #slide3 {
+                background:#ffff11;     
+            }
+            #slide3_dead {
+                background:#ffffff;
+            }
+            #slide4 {
+                background:#ff11ff;
+            }
+            #slide4_dead {
+                background:#ffffff;
+            }
+            #slide5 {
+                background:#000;
+            }
+            #slide5_dead {
+                background:#ffffff;
+            }
+            
+            /*--------------------------------------*/
+            /*-----------------BUTTONS--------------*/
+            .buttons {
+                width:180px;
+                height:80px;
+                border:0px;
+                border-radius:5px;
+                -moz-border-radius:5px;
+                color:#fff;
+                background-color:green;
+                float:left;
+                margin-left:100px;
+                margin-top:520px;
+            }
+            #buttonDiv {
+                float:left;
+                margin-left:-20px;
+            }
+
+        </style>
+        <script>
+            window.onload = function () {
+                    document.getElementById("introbutton").onclick = function() {
+                        buttonClick("introbutton");
+                        }
+                    document.getElementById("button1").onclick = function() {
+                        buttonClick("button1");
+                        } 
+                    document.getElementById("button2").onclick = function() {
+                        buttonClick("button2");
+                        }
+                    document.getElementById("button3").onclick = function() {
+                        buttonClick("button3");
+                        }
+                    document.getElementById("button4").onclick = function() {
+                        buttonClick("button4");
+                        }
+                    document.getElementById("button5").onclick = function() {
+                        buttonClick("button5");
+                        }
+                    document.getElementById("button6").onclick = function() {
+                        buttonClick("button6");
+                        }
+                    document.getElementById("button7").onclick = function() {
+                        buttonClick("button7");
+                        }
+                    document.getElementById("button8").onclick = function() {
+                        buttonClick("button8");
+                        }
+                    document.getElementById("button9").onclick = function() {
+                        buttonClick("button9");
+                        }
+                    document.getElementById("button10").onclick = function() {
+                        buttonClick("button10");
+                        }
+            }
+            
+            function buttonClick(input) {
+                if (input == "introbutton") {
+                    document.getElementById("intro").style.display="none";
+                    document.getElementById("slide1").style.display="block";
+                }
+                else if (input == "button1") {
+                    document.getElementById("slide1").style.display="none";
+                    document.getElementById("slide2").style.display="block";
+                }
+                else if (input == "button2") {
+                    document.getElementById("slide1").style.display="none";
+                    document.getElementById("slide1_dead").style.display="block";
+                }
+                else if (input == "button3") {
+                    document.getElementById("slide2").style.display="none";
+                    document.getElementById("slide3").style.display="block";
+                }
+                else if (input == "button4") {
+                    document.getElementById("slide2").style.display="none";
+                    document.getElementById("slide2_dead").style.display="block";
+                }
+                else if (input == "button5") {
+                    document.getElementById("slide3").style.display="none";
+                    document.getElementById("slide4").style.display="block";
+                }
+                else if (input == "button6") {
+                    document.getElementById("slide3").style.display="none";
+                    document.getElementById("slide3_dead").style.display="block";
+                }
+                else if (input == "button7") {
+                    document.getElementById("slide4").style.display="none";
+                    document.getElementById("slide5").style.display="block";
+                }
+                else if (input == "button8") {
+                    document.getElementById("slide4").style.display="none";
+                    document.getElementById("slide4_dead").style.display="block";
+                }
+                else if (input == "button9") {
+                    document.getElementById("slide5").style.display="none";
+                    document.getElementById("slide5").style.display="block";
+                }
+                else if (input == "button10") {
+                    document.getElementById("slide5").style.display="none";
+                    document.getElementById("slide5_dead").style.display="block";
+                }
+                else {
+                    //DO NOTHING
+                }
+                
+            }
+        </script>
+    </head>
+    
+    <body>
+        <!-- div#wrapper>div#slide$*5>img#slideimg$+input#button$.button$*2 -->
+        <div id="wrapper">
+            <div id="intro">
+                <input type="button" value="Fortsæt" id="introbutton">
+                <img src="" alt="" id="introimg">
+            </div>
+            
+            <!----------- SLIDE 1 ------------>
+            <div id="slide1" class="slides">
+                
+                <div id="buttonDiv">
+                    <input type="button" value="button1" id="button1" class="buttons">
+                    <input type="button" value="button2" id="button2" class="buttons">
+                </div>
+            </div>
+            <div id="slide1_dead" class="slides">
+                    <!------------------------->
+                    <!--     YOU'RE DEAD     -->
+                    <h1>DU ER DØD</h1>
+            </div>
+            
+            
+            <!----------- SLIDE 2 ------------>
+            <div id="slide2" class="slides">
+                <img src="" alt="" id="slideimg2">
+                <div id="buttonDiv">
+                <input type="button" value="button3" id="button3" class="buttons">
+                <input type="button" value="button4" id="button4" class="buttons">
+                </div>
+            </div>
+            <div id="slide2_dead" class="slides">
+                    <!------------------------->
+                    <!--     YOU'RE DEAD     -->
+                    <h1>DU ER DØD</h1>
+            </div>
+            
+            <!----------- SLIDE 3 ------------>
+            <div id="slide3" class="slides">
+                <img src="" alt="" id="slideimg3">
+                <div id="buttonDiv">
+                <input type="button" value="button5" id="button5" class="buttons">
+                <input type="button" value="button6" id="button6" class="buttons">
+                </div>
+            </div>
+            <div id="slide3_dead" class="slides">
+                    <!------------------------->
+                    <!--     YOU'RE DEAD     -->
+                    <h1>DU ER DØD</h1>
+            </div>
+            
+            <!----------- SLIDE 4 ------------>
+            <div id="slide4" class="slides">
+                <img src="" alt="" id="slideimg4">
+                <div id="buttonDiv">
+                <input type="button" value="button7" id="button7" class="buttons">
+                <input type="button" value="button8" id="button8" class="buttons">
+                </div>
+            </div>
+            <div id="slide4_dead" class="slides">
+                    <!------------------------->
+                    <!--     YOU'RE DEAD     -->
+                    <h1>DU ER DØD</h1>
+            </div>
+            
+            <!----------- SLIDE 5 ------------>
+            <div id="slide5" class="slides">
+                <img src="" alt="" id="slideimg5">
+                <div id="buttonDiv">
+                <input type="button" value="button9" id="button9" class="buttons">
+                <input type="button" value="button10" id="button10" class="buttons">
+                </div>
+            </div>
+            <div id="slide5_dead" class="slides">
+                    <!------------------------->
+                    <!--     YOU'RE DEAD     -->
+                    <h1>DU ER DØD</h1>
+            </div>
+        
+        </div>
+    </body>
+
+</html>
