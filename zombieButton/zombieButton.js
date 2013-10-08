@@ -2,52 +2,69 @@ window.onload = function() {
     markup();
 
 var bigFatButton = document.getElementById("bigFatButton");
-// Første Event
-    //IE fallback
-       if (!bigFatButton.addEventListener) {
+
             bigFatButton.onmouseover = function() {
-                alert("Nej! - Stop!");
+                this.style.backgroundImage = "url('img/state2.png')";
                 soundManager.load('scareSound');
                 this.onmouseover = null;
                 }
-        } // Resten af browserne...
-        else {                             
-        bigFatButton.addEventListener('mouseover',function () {
-	                    ///this will execute only once 
-                          alert('Nej! - Stop!');
-                          soundManager.load('scareSound');
-                          this.removeEventListener('mouseover', arguments.callee);
-                    },false);
-       }
-// Anden Event
-        //IE fallback
-    var setClick = false;
-        if(!bigFatButton.addEventListener) {
+
+    var setClick = 0;
             bigFatButton.onclick = function() {
-                if (setClick === false) {
-                alert("Sidste chance! - Du kommer til at fortryde det!");
-                setClick = true;
+                if (setClick === 0) {
+                this.style.backgroundImage = "url('img/state3.png')";
+                setClick++;
                 }
-                else if (setClick === true){
+                else if (setClick === 1){
+                this.style.backgroundImage = "url('img/state4.png')";
+                setClick++;
+                }
+                else if (setClick === 2) {
+                this.style.backgroundImage = "url('img/state5.png')";
+                setClick++;
+                }
+                else if (setClick === 3){
+                this.style.backgroundImage = "url('img/state6.png')";
+                setClick++;
+                }
+                else if (setClick === 4){
+                this.style.backgroundImage = "url('img/state7.png')";
+                setClick++;
+                }
+                else if (setClick === 5){
+                this.style.backgroundImage = "url('img/state8.png')";
+                setClick++;
+                }
+                else if (setClick === 6){
+                this.style.backgroundImage = "url('img/state9.png')";
+                setClick++;
+                }
+                else if (setClick === 7){
+                this.style.backgroundImage = "url('img/state10.png')";
+                setClick++;
+                }
+                else if (setClick === 8){
+                this.style.backgroundImage = "url('img/state11.png')";
+                setClick++;
+                }
+                else if (setClick === 9){
+                this.style.backgroundImage = "url('img/state12.png')";
+                setClick++;
+                }
+                else if (setClick === 10){
+                this.style.backgroundImage = "url('img/state13.png')";
+                setClick++;
+                }
+                else if (setClick === 11){
+                this.style.backgroundImage = "url('img/state14.png')";
+                setClick++;
+                }
+                else if (setClick === 12){
+                this.style.backgroundImage = "url('img/state16.png')";
+                setClick = 0;
                 scare();
-                this.onclick = null;
                 }
             }
-        } //Resten af browserne...
-            bigFatButton.addEventListener('click',function () { 
-                    ///this will execute only once
-                      alert('Sidste chance! - Du kommer til at fortryde det!');
-                      this.removeEventListener('click', arguments.callee);
-                      
-                // Tredje Event             
-                bigFatButton.addEventListener('click',function () {
-                        ///this will execute only once
-                          scare();
-                          this.removeEventListener('click', arguments.callee);
-                          
-                    },false);    
-             
-                },false); 
 }
 
 function markup() {
@@ -55,8 +72,8 @@ function markup() {
     var heightOfWindow = Math.min(jQuery(window).height());
     //==== HTML ====//
     jQuery('body').append(	"<div id='lightBoxScare' onclick='closeScare()'>" +
-						"</div><div id='imageContainer'><img src='http://placekitten.com/800/800' /></div>");
-    jQuery("body").append('<div id="bigFatButton" style="width: 300px; height: 300px; border-radius: 150px; background-color:#5300ED;"><p>BIG FAT BUTTON</p></div>');
+						"</div><div id='imageContainer'><img src='img/state15.png' /></div>");
+    jQuery("body").append('<div id="bigFatButton"></div>');
     
     //==== CSS ====//
     jQuery('#lightBoxScare').css({
@@ -75,15 +92,14 @@ function markup() {
 							"position" : "absolute",
 							"top" : "80px",
 							"left" : "50%",
-							"margin" : "0 0 0 -400px", //Træk halvdelen af boksen fra
+							"margin" : "0 0 0 -512px", //Træk halvdelen af boksen fra
 							"display" : "none",
 							"zIndex" : "500",
 							});
     jQuery('#bigFatButton').css({
-                            "width" : "300",
-							"height" : "300",
-							"border-radius" : "150px",
-							"background-color" : "#5300ED",
+                            "width" : "170",
+							"height" : "170",
+							"background-image" : "url(img/state1.png)",
                             });
 
     jQuery('#bigFatButton p').css({
@@ -94,11 +110,11 @@ function markup() {
 }
 
 soundManager.setup({
-          url: '/small_games/swf/',
+          url: '/jsGames/zombieButton/swf/',
           onready: function() {
             var mySound = soundManager.createSound({
               id: 'scareSound',
-              url: '/small_games/3733.mp3',
+              url: '/jsGames/zombieButton/scream.mp3',
             });
           },
     defaultOptions: {
