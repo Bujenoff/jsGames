@@ -1,0 +1,29 @@
+/* ----------------------------------------------------
+   created with http://www.codeandweb.com/texturepacker 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:1c2f9e88e5de3cc0bb0c354f87397411:1/1$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(tp-sprite.png);}
+
+.state1 {width:154px; height:116px; background-position: -938px -120px}
+.state10 {width:154px; height:116px; background-position: -1094px -2px}
+.state11 {width:154px; height:116px; background-position: -938px -2px}
+.state12 {width:154px; height:116px; background-position: -782px -120px}
+.state13 {width:154px; height:116px; background-position: -782px -2px}
+.state14 {width:154px; height:116px; background-position: -626px -120px}
+.state15 {width:154px; height:116px; background-position: -626px -2px}
+.state2 {width:154px; height:116px; background-position: -470px -120px}
+.state3 {width:154px; height:116px; background-position: -470px -2px}
+.state4 {width:154px; height:116px; background-position: -314px -120px}
+.state5 {width:154px; height:116px; background-position: -314px -2px}
+.state6 {width:154px; height:116px; background-position: -158px -120px}
+.state7 {width:154px; height:116px; background-position: -158px -2px}
+.state8 {width:154px; height:116px; background-position: -2px -120px}
+.state9 {width:154px; height:116px; background-position: -2px -2px}
