@@ -41,54 +41,108 @@
                 display:none;
             }
             #slide1 {
-                background:#11ffff;  
+                background-image: url(img/slide1_clean.jpg);  
             }
             #slide1_dead {
-                background:#ffffff;
+                background-image: url(img/slide1_doed.jpg);
             }
             #slide2 {
-                background:#ff11ff;   
+                background-image: url(img/slide2_clean.jpg);   
             }
             #slide2_dead {
-                background:#ffffff;  
+                background-image: url(img/slide2_doed.jpg);  
             }
             #slide3 {
-                background:#ffff11;     
+                background-image: url(img/slide3_clean.jpg);     
             }
             #slide3_dead {
-                background:#ffffff;
+                background-image: url(img/slide3_doed.jpg);
             }
             #slide4 {
-                background:#ff11ff;
+                background-image: url(img/slide4_clean.jpg);
             }
-            #slide4_dead {
-                background:#ffffff;
+            #slide4_doed1 {
+                background-image: url(img/slide4_doed1.jpg);
             }
-            #slide5 {
-                background:#000;
+            #slide4_doed2 {
+                background-image: url(img/slide4_doed2.jpg);
             }
-            #slide5_dead {
-                background:#ffffff;
-            }
+
             
             /*--------------------------------------*/
             /*-----------------BUTTONS--------------*/
             .buttons {
-                width:180px;
-                height:80px;
+                width:251px;
+                height:177px;
                 border:0px;
                 border-radius:5px;
-                -moz-border-radius:5px;
-                color:#fff;
-                background-color:green;
                 float:left;
-                margin-left:100px;
-                margin-top:520px;
+                margin-left: 50px;
+                margin-top: 425px;
             }
             #buttonDiv {
                 float:left;
                 margin-left:-20px;
             }
+            #button1 {
+                background-image: url(img/slide1_knap_1.png);
+            }
+            #button1:hover {
+                background-position: 251px 0px;
+            }
+            #button2 {
+                background-image: url(img/slide1_knap_2.png);
+            }
+            #button2:hover {
+                background-position: 251px 0px;
+            }
+            #button3 {
+                background-image: url(img/slide2_knap_1.png);
+            }
+            #button3:hover {
+                background-position: 251px 0px;
+            }
+            #button4 {
+                background-image: url(img/slide2_knap_2.png);
+            }
+            #button4:hover {
+                background-position: 251px 0px;
+            }
+            #button5 {
+                background-image: url(img/slide3_knap_1.png);
+            }
+            #button5:hover {
+                background-position: 251px 0px;
+            }
+            #button6 {
+                background-image: url(img/slide3_knap_2.png);
+            }
+            #button6:hover {
+                background-position: 251px 0px;
+            }
+            #button7 {
+                background-image: url(img/slide4_knap_1.png);
+            }
+            #button7:hover {
+                background-position: 251px 0px;
+            }
+            #button8 {
+                background-image: url(img/slide4_knap_2.png);
+            }
+            #button8:hover {
+                background-position: 251px 0px;
+            }
+        #prov_igen {
+            width:159px;
+            height:43px;
+            background-image: url(img/knap_proevigen.png);
+            position: relative;
+            top: 550px;
+            left: 220px;
+        }
+        #prov_igen:hover {
+            background-position: 159px 0px;
+        }
 
         </style>
         <script>
@@ -120,12 +174,6 @@
                     document.getElementById("button8").onclick = function() {
                         buttonClick("button8");
                         }
-                    document.getElementById("button9").onclick = function() {
-                        buttonClick("button9");
-                        }
-                    document.getElementById("button10").onclick = function() {
-                        buttonClick("button10");
-                        }
             }
             
             function buttonClick(input) {
@@ -135,11 +183,11 @@
                 }
                 else if (input == "button1") {
                     document.getElementById("slide1").style.display="none";
-                    document.getElementById("slide2").style.display="block";
+                    document.getElementById("slide1_dead").style.display="block";
                 }
                 else if (input == "button2") {
                     document.getElementById("slide1").style.display="none";
-                    document.getElementById("slide1_dead").style.display="block";
+                    document.getElementById("slide2").style.display="block";
                 }
                 else if (input == "button3") {
                     document.getElementById("slide2").style.display="none";
@@ -151,27 +199,27 @@
                 }
                 else if (input == "button5") {
                     document.getElementById("slide3").style.display="none";
-                    document.getElementById("slide4").style.display="block";
+                    document.getElementById("slide3_dead").style.display="block";
                 }
                 else if (input == "button6") {
                     document.getElementById("slide3").style.display="none";
-                    document.getElementById("slide3_dead").style.display="block";
+                    document.getElementById("slide4").style.display="block";
                 }
                 else if (input == "button7") {
                     document.getElementById("slide4").style.display="none";
-                    document.getElementById("slide5").style.display="block";
+                    document.getElementById("slide4_doed1").style.display="block";
                 }
                 else if (input == "button8") {
                     document.getElementById("slide4").style.display="none";
-                    document.getElementById("slide4_dead").style.display="block";
+                    document.getElementById("slide4_doed2").style.display="block";
                 }
-                else if (input == "button9") {
-                    document.getElementById("slide5").style.display="none";
-                    document.getElementById("slide5").style.display="block";
-                }
-                else if (input == "button10") {
-                    document.getElementById("slide5").style.display="none";
-                    document.getElementById("slide5_dead").style.display="block";
+                else if (input == "prov_igen") {
+                    document.getElementById("slide1_dead").style.display="none";
+                    document.getElementById("slide2_dead").style.display="none";
+                    document.getElementById("slide3_dead").style.display="none";
+                    document.getElementById("slide4_doed1").style.display="none";
+                    document.getElementById("slide4_doed2").style.display="none";
+                    document.getElementById("intro").style.display="block";
                 }
                 else {
                     //DO NOTHING
@@ -185,7 +233,7 @@
         <!-- div#wrapper>div#slide$*5>img#slideimg$+input#button$.button$*2 -->
         <div id="wrapper">
             <div id="intro">
-                <input type="button" value="Fortsæt" id="introbutton">
+                <div value="Fortsæt" id="introbutton"></div>
                 <img src="" alt="" id="introimg">
             </div>
             
@@ -193,14 +241,14 @@
             <div id="slide1" class="slides">
                 
                 <div id="buttonDiv">
-                    <input type="button" value="button1" id="button1" class="buttons">
-                    <input type="button" value="button2" id="button2" class="buttons">
+                    <div value="button1" id="button1" class="buttons"></div>
+                    <div value="button2" id="button2" class="buttons"></div>
                 </div>
             </div>
             <div id="slide1_dead" class="slides">
                     <!------------------------->
                     <!--     YOU'RE DEAD     -->
-                    <h1>DU ER DØD</h1>
+                    <div id="prov_igen" onclick="buttonClick('prov_igen')"></div>
             </div>
             
             
@@ -208,56 +256,47 @@
             <div id="slide2" class="slides">
                 <img src="" alt="" id="slideimg2">
                 <div id="buttonDiv">
-                <input type="button" value="button3" id="button3" class="buttons">
-                <input type="button" value="button4" id="button4" class="buttons">
+                <div value="button3" id="button3" class="buttons"></div>
+                <div value="button4" id="button4" class="buttons"></div>
                 </div>
             </div>
             <div id="slide2_dead" class="slides">
                     <!------------------------->
                     <!--     YOU'RE DEAD     -->
-                    <h1>DU ER DØD</h1>
+                    <div id="prov_igen" onclick="buttonClick('prov_igen')"></div>
             </div>
             
             <!----------- SLIDE 3 ------------>
             <div id="slide3" class="slides">
                 <img src="" alt="" id="slideimg3">
                 <div id="buttonDiv">
-                <input type="button" value="button5" id="button5" class="buttons">
-                <input type="button" value="button6" id="button6" class="buttons">
+                <div value="button5" id="button5" class="buttons"></div>
+                <div value="button6" id="button6" class="buttons"></div>
                 </div>
             </div>
             <div id="slide3_dead" class="slides">
                     <!------------------------->
                     <!--     YOU'RE DEAD     -->
-                    <h1>DU ER DØD</h1>
+                    <div id="prov_igen" onclick="buttonClick('prov_igen')"></div>
             </div>
             
             <!----------- SLIDE 4 ------------>
             <div id="slide4" class="slides">
                 <img src="" alt="" id="slideimg4">
                 <div id="buttonDiv">
-                <input type="button" value="button7" id="button7" class="buttons">
-                <input type="button" value="button8" id="button8" class="buttons">
+                <div value="button7" id="button7" class="buttons"></div>
+                <div value="button8" id="button8" class="buttons"></div>
                 </div>
             </div>
-            <div id="slide4_dead" class="slides">
+            <div id="slide4_doed1" class="slides">
                     <!------------------------->
                     <!--     YOU'RE DEAD     -->
-                    <h1>DU ER DØD</h1>
+                    <div id="prov_igen" onclick="buttonClick('prov_igen')"></div>
             </div>
-            
-            <!----------- SLIDE 5 ------------>
-            <div id="slide5" class="slides">
-                <img src="" alt="" id="slideimg5">
-                <div id="buttonDiv">
-                <input type="button" value="button9" id="button9" class="buttons">
-                <input type="button" value="button10" id="button10" class="buttons">
-                </div>
-            </div>
-            <div id="slide5_dead" class="slides">
+            <div id="slide4_doed2" class="slides">
                     <!------------------------->
                     <!--     YOU'RE DEAD     -->
-                    <h1>DU ER DØD</h1>
+                    <div id="prov_igen" onclick="buttonClick('prov_igen')"></div>
             </div>
         
         </div>
